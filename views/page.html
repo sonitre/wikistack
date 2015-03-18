@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h2>{{doc.title}}</h2>
+    <hr>
+    <p>{{ doc.body|markedDoc }}</p>
+    <p>Tags: {{ doc.tags.join(","); }}</p>
+    
+{% endblock %}

@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}WikiStack{% endblock %}</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+  	{% block header %}
+
+  	<nav class="navbar navbar-inverse navbar-top" style="border-radius: 0 !important">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">WIKISTACK</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/add/">ADD PAGE</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  	{% endblock %} 
+
+   <div class= "container">
+   	{% block content %}
+
+   {% endblock %}
+
+    <footer class="footer">
+      <div class="container">
+          <hr>
+        <p class="text-muted">WikiStack, Fullstack Academy</p>
+        <form action="/tags/search" method="GET">
+
+       	<h4> Search for Tags </h4>
+        <input name="tagSearch" class="form-control" placeholder="Tags">
+        <br>
+      
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+      </div>
+    </footer>
+ 	</div>
+  </body>
+</html>
